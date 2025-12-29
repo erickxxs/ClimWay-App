@@ -8,13 +8,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Define tus colores personalizados aquí.
-        // Puedes usar los valores hexadecimales que mejor representen tu logo.
-        // Estos son ejemplos basados en el degradado anterior:
-        climwayBlue: '#3B82F6',   // Un azul similar al from-blue-500
-        climwayPurple: '#9333EA', // Un púrpura similar al to-purple-600
-        climwayDarkBlue: '#2563EB', // Un tono un poco más oscuro si lo prefieres para el fondo de la tarjeta
-        climwayDarkPurple: '#7E22CE', // Un tono más oscuro del púrpura
+        // Nueva paleta de colores para el rediseño
+        climwayBg: '#0f172a',           // Fondo navy oscuro
+        climwayCard: '#1e3a4c',         // Tarjetas teal oscuro
+        climwayCardLight: '#f5f0e8',    // Tarjetas del pronóstico (beige/crema)
+        climwayAccent: '#0d9488',       // Acento teal
+        climwayText: '#94a3b8',         // Texto secundario
+        climwayBorder: '#2d4a5e',       // Bordes de tarjetas
       }
     },
   },

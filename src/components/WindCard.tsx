@@ -8,10 +8,24 @@ export default function WindCard({ speed, direction }: WindCardProps) {
   const speedKmh = Math.round(speed * 3.6);
 
   return (
-    <div className="bg-climwayPurple backdrop-blur-sm p-6 rounded-xl shadow-lg text-center text-white transition-transform duration-300 hover:scale-105">
-      <h2 className="text-xl font-semibold mb-2">Viento</h2>
-      <p className="text-4xl font-bold">{speedKmh} <span className="text-2xl font-normal">km/h</span></p>
-      <p className="mt-2 text-lg">Dirección: {direction}°</p>
+    <div className="bg-climwayCard/90 backdrop-blur-md p-5 rounded-2xl border border-climwayBorder/30 shadow-xl">
+      {/* Header con ícono */}
+      <div className="flex items-center gap-2 text-slate-400 mb-3">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
+        </svg>
+        <span className="text-sm font-medium">Viento</span>
+      </div>
+
+      {/* Velocidad */}
+      <p className="text-3xl font-semibold text-white">
+        {speedKmh} <span className="text-lg font-normal text-slate-400">km/h</span>
+      </p>
+
+      {/* Dirección */}
+      <p className="text-sm text-slate-400 mt-2">
+        Dirección: {direction}° ↗
+      </p>
     </div>
   );
 }
